@@ -10,15 +10,23 @@ Both Retroid and Ayaneo support running a script as root. This is very useful bu
 
 Download the latest version from [Releases](https://github.com/nckstwrt/RetroAndroidShell/releases)
 
-These 2 files need to be placed on your device at /sdcard
+These files need to be placed on your device at /sdcard
 
 This folder will be the root of your accessible internal storage
+
+With ADB it would be `adb push run_socat_and_bftpd.sh /sdcard`(for all 3 files)
+
+With the device plugged in on Windows it would be copying to the root of "internal shared storage"
 
 ## Running
 
 On Retroid Devices you need to run the script via: Settings -> Handheld Settings -> Advanced -> Run script as root
 
 On Ayaneo Device you need to run the script via: AyaSettings -> Device -> Root Script
+
+Then run the script `run_socat_and_bftpd.sh` it will unpack `socat_install.tar.gz` to /data/local/tmp and then remove `socat_install.tar.gz`. The rooted socat shell (port 4444) and FTP (port 21) will then be running.
+
+Restarting the device will stop socat and bftpd running as well running `turnoff_socat_and_bftpd.sh` as root.
 
 ## Usage
 
