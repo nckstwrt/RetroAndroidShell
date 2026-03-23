@@ -26,7 +26,7 @@ On **Ayaneo** Devices you need to run the script via: **AyaSettings -> Device ->
 
 Then run the script `run_socat_and_bftpd.sh` it will unpack `socat_install.tar.gz` to /data/local/tmp and then remove `socat_install.tar.gz`. The rooted socat shell (port 4444) and FTP (port 21) will then be running.
 
-Restarting the device will stop socat and bftpd running as well running `turnoff_socat_and_bftpd.sh` as root.
+Restarting the device will stop socat and bftpd running as will running `turnoff_socat_and_bftpd.sh` as root.
 
 ## Usage
 
