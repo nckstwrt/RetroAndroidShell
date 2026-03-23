@@ -30,7 +30,7 @@ Restarting the device will stop socat and bftpd running as well running `turnoff
 
 ## Usage
 
-##### On Windows
+### On Windows
 
 * Use [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to connect
 
@@ -42,18 +42,20 @@ Restarting the device will stop socat and bftpd running as well running `turnoff
 
 * Select Terminal settings on the left and Force off Local echo and Local line editing
 
-##### On Termux/Linux
+### On Termux/Linux
 
-* Install netcat and rlwrap (in termux: `pkg i nmap rlwrap`)
+Install netcat and rlwrap (in termux: `pkg i nmap rlwrap`)
 
 * rlwrap nc localhost 4444
   
   or
 
-* install socat (in termux: pkg i socat)
+* install socat (in termux: `pkg i socat`)
 
 * socat -,raw,echo=0 TCP:localhost:4444
 
-##### FTP
+(replace localhost with the IP address of your device)
+
+### FTP
 
 For FTP you can use [FileZilla](https://filezilla-project.org/download.php) or any FTP client and connect FTP to the IP address as user `anonymous` (password can be blank) for full access.
