@@ -8,7 +8,7 @@ Both Retroid and Ayaneo support running a script as root. This is very useful bu
 
 ## Installation
 
-Download the latest version from []()
+Download the latest version from [Releases](https://github.com/nckstwrt/RetroAndroidShell/releases)
 
 These 2 files need to be placed on your device at /sdcard
 
