@@ -4,7 +4,7 @@ Remote shell support for Retroid and Ayaneo handhelds
 
 ## Background
 
-Both Retroid and Ayaneo support running a script as root. This is very useful but not as convienant as having a shell and FTP server with root access without the need to flash new bootimages, etc with Magisk
+Both Retroid and Ayaneo support running a script as root. This is very useful but not as convienant as having a shell, adb and FTP server with root access without the need to flash new bootimages, etc with Magisk
 
 ## Installation
 
@@ -14,7 +14,7 @@ These files need to be placed on your device at /sdcard
 
 This folder will be the root of your accessible internal storage
 
-With ADB it would be `adb push run_socat_and_bftpd.sh /sdcard`(for all 3 files)
+With ADB it would be `adb push enable_root.sh /sdcard`(for all 3 files)
 
 With the device plugged in on Windows it would be copying to the root of "internal shared storage"
 
@@ -24,9 +24,9 @@ On **Retroid** Devices you need to run the script via: **Settings -> Handheld Se
 
 On **Ayaneo** Devices you need to run the script via: **AyaSettings -> Device -> Root Script**
 
-Then run the script `run_socat_and_bftpd.sh` it will unpack `socat_install.tar.gz` to /data/local/tmp and then remove `socat_install.tar.gz`. The rooted socat shell (port 4444) and FTP (port 21) will then be running.
+Then run the script `enable_root.sh` it will unpack `root_install.tar.gz` to /data/local/tmp and then remove `root_install.tar.gz`. The rooted socat shell (port 4444) and FTP (port 21) will then be running.
 
-Restarting the device will stop socat and bftpd running as will running `turnoff_socat_and_bftpd.sh` as root.
+Restarting the device will stop socat and bftpd running as will running `disable_root.sh` as root.
 
 ## Usage
 
@@ -59,3 +59,13 @@ Restarting the device will stop socat and bftpd running as will running `turnoff
 ### FTP
 
 For FTP you can use [FileZilla](https://filezilla-project.org/download.php) or any FTP client and connect FTP to the IP address as user `anonymous` (password can be blank) for full access.
+
+### ADB
+
+It now also restarts the ADB daemon to be in root mode and available over wireless. So you can:
+
+* adb connect <ip address>
+
+* adb shell
+
+And you will have root via ADB

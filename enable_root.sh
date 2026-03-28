@@ -1,4 +1,4 @@
-[ -f /sdcard/socat_install.tar.gz ] && tar -xzf /sdcard/socat_install.tar.gz -C /data/local/tmp && rm -f /sdcard/socat_install.tar.gz
+[ -f /sdcard/root_install.tar.gz ] && tar -xzf /sdcard/root_install.tar.gz -C /data/local/tmp && rm -f /sdcard/root_install.tar.gz
 chmod +x /data/local/tmp/socat
 chmod +x /data/local/tmp/bftpd
 chmod +x /data/local/tmp/reset_prop
