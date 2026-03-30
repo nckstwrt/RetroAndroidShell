@@ -1,3 +1,4 @@
+setenforce 1
 svc power stayon false
 dumpsys deviceidle enable
 dumpsys battery reset
