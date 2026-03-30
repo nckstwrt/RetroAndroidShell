@@ -22,6 +22,10 @@ chmod 777 $UPPER
 cp $MY_SU $UPPER/su
 chmod 755 $UPPER/su
 
+# Sort nano out too
+mv /data/local/tmp/nano $UPPER
+mv /data/local/tmp/terminfo $UPPER
+
 # Mount overlay: upper layer wins over lower (/system/bin)
 # Anything in upper/ shadows the same name in lower/
 mount -t overlay overlay -o lowerdir=/system/bin,upperdir=$UPPER,workdir=$WORK /system/bin
