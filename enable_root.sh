@@ -4,6 +4,7 @@ chmod +x /data/local/tmp/socat
 chmod +x /data/local/tmp/bftpd
 chmod +x /data/local/tmp/reset_prop
 chmod +x /data/local/tmp/nano
+chmod +x /data/local/tmp/chown
 chmod +x /data/local/tmp/sudaemon
 chmod +x /data/local/tmp/su
 chmod +x /data/local/tmp/init_su.sh
