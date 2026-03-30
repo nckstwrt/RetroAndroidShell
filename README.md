@@ -1,10 +1,10 @@
 # RetroAndroidShell
 
-Remote shell support for Retroid and Ayaneo handhelds
+Remote shell and temporary root support for Retroid and Ayaneo handhelds
 
 ## Background
 
-Both Retroid and Ayaneo support running a script as root. This is very useful but not as convienant as having a shell, adb and FTP server with root access without the need to flash new bootimages, etc with Magisk
+Both Retroid and Ayaneo support running a script as root. This is very useful but not as convienant as having apps be able to use root, a rooted shell, rooted adb and FTP server with root access without the need to flash new bootimages, etc with Magisk
 
 ## Installation
 
@@ -24,9 +24,9 @@ On **Retroid** Devices you need to run the script via: **Settings -> Handheld Se
 
 On **Ayaneo** Devices you need to run the script via: **AyaSettings -> Device -> Root Script**
 
-Then run the script `enable_root.sh` it will unpack `root_install.tar.gz` to /data/local/tmp and then remove `root_install.tar.gz`. The rooted socat shell (port 4444) and FTP (port 21) will then be running.
+Then run the script `enable_root.sh` it will unpack `root_install.tar.gz` to /data/local/tmp and then remove `root_install.tar.gz`. The rooted socat shell (port 4444) and FTP (port 21) will then be running. Any apps required root should now be able to use root.
 
-Restarting the device will stop socat and bftpd running as will running `disable_root.sh` as root.
+Restarting the device will stop socat and bftpd running and disable root. As will running `disable_root.sh` as a root script.
 
 ## Usage
 
